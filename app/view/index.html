@@ -1,0 +1,45 @@
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>CNN SERVE</title>
+        <link rel='stylesheet' href='../static/style.css'>
+        <script src='../static/client.js'></script>
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <div class='center'>
+                <h1>CNN SERVE</h1>
+                <h2>Quickly present your fastai model to your friends</h2>
+                <div class='content'>
+                    <div class='no-display'>
+                        <input id='file-input'
+                            class='no-display'
+                            type='file'
+                            name='file'
+                            accept='image/*'
+                            onchange='showPicked(this)'>
+                    </div>
+                    <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+                    <div class='upload-label'>
+                        <label id='upload-label'>No file chosen</label>
+                    </div>
+                    <div>
+                        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+                    </div>
+                    <div class='analyze'>
+                        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+                    </div>
+                    <div class='result-label'>
+                        <label id='result-label'></label>
+                        <label id='top3-result-label'></label>
+                    </div>
+                    <footer>
+                        Based on <a href='https://github.com/cedrickchee/pytorch-serving'>Pytorch-Serving</a>.
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
